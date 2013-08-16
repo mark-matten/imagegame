@@ -17,8 +17,7 @@ file.  Inside the annotation file, the contents of <filename> ___
 'car1.jpg'.  The contents of <folder> ___ </folder> must be changed to
 'Images'.
 
-An example image file and annotation file are included in the repository.
-If you need any help getting this working, please contact me.  Also, I'm
+If anyone needs any help getting this working, please contact me.  Also, I'm
 happy to set up an image dataset for anyone who wants to create their own.
 If you want me to do this for you, please send me a folder with the images
 and the corresponding LabelMe annotation files, and I can create the
