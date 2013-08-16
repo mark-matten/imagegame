@@ -1,3 +1,31 @@
+%{
+Matlab code for creating the image datasets for both players and the the
+text file with image names and object locations.  createDataset requires
+that your image files and annotation files follow these guidelines:
+
+Images files should be named according to the desired target object.  For
+example, if you want bounding boxes to be drawn around the cars in an
+image, the file name should be 'car1.jpg', 'car2.jpg', etc., with no repeat
+file names.  These image files should be stored in a folder 'Images', which
+is in a folder 'gameImages' on the Desktop.  A folder 'finalGameImages'
+will be created in 'gameImages' to store the game images used for player 1
+and player 2.
+
+Annotation files should have the same file name as the respective image
+file.  Inside the annotation file, the contents of <filename> ___
+</filename> must be changed to the same file name as the image, such as
+'car1.jpg'.  The contents of <folder> ___ </folder> must be changed to
+'Images'.
+
+An example image file and annotation file are included in the repository.
+If you need any help getting this working, please contact me.  Also, I'm
+happy to set up an image dataset for anyone who wants to create their own.
+If you want me to do this for you, please send me a folder with the images
+and the corresponding LabelMe annotation files, and I can create the
+dataset and the text file for you.
+
+%}
+
 clc;
 clear;
 
@@ -84,7 +112,7 @@ for i = 1:Nimages
         f = figure('visible','off');
         imshow(img, 'Border', 'tight');
         rectangle('Position', [xMin, yMin, xMax - xMin, yMax - yMin], 'LineWidth', 3, 'EdgeColor','r');
-        print(f, '-r80', '-djpeg', strcat('C:/Users/Mark/Desktop/gameImages1/test/ImagesP1/', fileName(1:end-4), '_', int2str(j), '.jpg'));
+        print(f, '-r80', '-djpeg', strcat('C:/Users/Mark/Desktop/gameImages1/finalGameImages/ImagesP1/', fileName(1:end-4), '_', int2str(j), '.jpg'));
 
         name = strcat(fileName(1:end-4), '_', int2str(j), '.jpg', ', ', num2str(xMin / ncols), ', ', num2str(xMax / ncols), ', ', num2str(yMin / nrows), ', ', num2str(yMax / nrows), '\n');    
         fprintf(fileWrite, name);
@@ -94,7 +122,7 @@ for i = 1:Nimages
     scaledImage = imresize(img, [nrows, ncols]);
     f1 = figure('visible','off');
     imshow(scaledImage, 'Border', 'tight');
-    print(f1, '-r80', '-djpeg', strcat('C:/Users/Mark/Desktop/gameImages1/test/ImagesP2/', fileName));
+    print(f1, '-r80', '-djpeg', strcat('C:/Users/Mark/Desktop/gameImages1/finalGameImages/ImagesP2/', fileName));
 
 end
 
