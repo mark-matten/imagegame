@@ -10,7 +10,7 @@ To start the game server, run: ```node server.js```
 
 ## Testing Locally
 
-The game can be tested locally using a local web server such as xampp.  Copy the game-code folder into your /xampp/htdocs/ directory.  Start up the local server, and run ```node server.js``` in Command Prompt at the xampp/htdocs/game-code directory.  In your web browser, navigate to localhost:9000 to view the game.  
+The game can be tested locally using a local web server such as xampp.  Copy the ```game-code``` folder into your ```/xampp/htdocs/``` directory.  Start up the local server, and run ```node server.js``` in Command Prompt at the ```xampp/htdocs/game-code``` directory.  In your web browser, navigate to ```localhost:9000``` to view the game.  
 
 ## Deploying Online
 
