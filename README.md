@@ -4,7 +4,7 @@ This is a two-player online game for gathering referring expressions for objects
 
 ## Installation
 
-First install Node.js.  To install all of the node packages, go to the directory of the game in Command Prompt and run: ```npm install```
+First, install Node.js.  To install all of the node packages, go to the directory of the game in Command Prompt and run: ```npm install```
 
 To start the game server, run: ```node server.js```
 
@@ -18,4 +18,4 @@ The game can easily be uploaded onto the internet for anyone to play using a ser
 
 ## Creating an Image Dataset
 
-The dataset used in this game was created in Matlab from LabelMe images.  The Matlab code also generates the text document ```inputFileNew.txt```, which the game uses to load images and object locations.  
+The dataset used in this game was created in Matlab from LabelMe images.  The Matlab code also generates the text document ```inputFileNew.txt```, which the game uses to load images and object locations.  If you wish to create your own dataset or add more images to the current dataset, the Matlab code is included in this repository.  However, it requires some setting up, and in order for it to work it is necessary for your image filenames and annotation files to follow a specific format.  If you need any assistance, please contact me.  In addition, I am happy to set up an image dataset for anyone who wants to create their own.  If you want me to do this for you, please send me a folder with the images and the corresponding LabelMe annotation files, and I can create the dataset and the text file for you.
